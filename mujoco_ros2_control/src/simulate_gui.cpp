@@ -134,6 +134,9 @@ namespace mujoco_simulate_gui {
 
         sim->LoadOnRenderThread();
 
+        // Auto-start simulation (required for headless/Docker operation)
+        sim->run = 1;
+
         ui_window = glfwGetCurrentContext();
     }
 
